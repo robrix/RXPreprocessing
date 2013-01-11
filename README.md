@@ -23,3 +23,5 @@ Folding a macro over a variadic list. This can make it easier to build variadic 
 Preprocessor-based interpolation of NSStrings. This allows you to interpolate complex strings without requiring you to remember which format specifier you want for each. You can still, however, customize the formatting of each individual parameter to specify precision or width.
 
 Requires Foundation, and uses `__attribute__((overloadable))` functions to generate the type specifiers for the format strings, since clang’s support for C11’s `_Generic` expressions appears to have difficulty when both `char *` and `default` options are added.
+
+Inspired by @pgor, who nerd-sniped me one fine morning.
