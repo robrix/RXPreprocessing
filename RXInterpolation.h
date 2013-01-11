@@ -43,4 +43,13 @@ Formats `value` as an NSString according to its type and the qualifiers specifie
 		return [NSString stringWithFormat:[NSString stringWithFormat:@"%%%s%@", #format, _rx_format_type_specifier_for_value(_rx_cached_value)], _rx_cached_value]; \
 	})()
 
+
+/**
+`RXLog(...)`
+
+Prints a logging message whose parameters are formatted with `rx_q`. Uses NSLog to actually print the message.
+*/
+#define RXLog(...) \
+	NSLog(@"%@", rx_q(__VA_ARGS__))
+
 #endif
