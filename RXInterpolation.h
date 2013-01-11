@@ -34,7 +34,7 @@ Formats `value` as an NSString according to its type and the qualifiers specifie
 - doubles and floats
 - Objective-C objects
 - C strings
-- pointers, which are formatted with %x
+- pointers, which are formatted with %p (thanks to @boredzo for the correction)
 */
 
 #define rx_f(format, value) \
