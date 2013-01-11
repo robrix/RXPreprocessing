@@ -10,7 +10,7 @@ __attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_
 __attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(uint32_t x) { return @"u"; }
 __attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(int32_t x) { return @"i"; }
 
-__attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(void *x) { return @"x"; }
+__attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(void *x) { return @"p"; }
 
 __attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(double x) { return @"f"; }
 __attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(float x) { return @"f"; }

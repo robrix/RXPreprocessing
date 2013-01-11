@@ -34,7 +34,7 @@ Formats `value` as an NSString according to its type and the qualifiers specifie
 - doubles and floats
 - Objective-C objects
 - C strings
-- pointers, which are formatted with %x
+- pointers, which are formatted with %p (thanks to @boredzo for the correction)
 */
 
 #define rx_f(format, value) \
@@ -42,5 +42,14 @@ Formats `value` as an NSString according to its type and the qualifiers specifie
 		__typeof__(value) _rx_cached_value = (value); \
 		return [NSString stringWithFormat:[NSString stringWithFormat:@"%%%s%@", #format, _rx_format_type_specifier_for_value(_rx_cached_value)], _rx_cached_value]; \
 	})()
+
+
+/**
+`RXLog(...)`
+
+Prints a logging message whose parameters are formatted with `rx_q`. Uses NSLog to actually print the message.
+*/
+#define RXLog(...) \
+	NSLog(@"%@", rx_q(__VA_ARGS__))
 
 #endif
