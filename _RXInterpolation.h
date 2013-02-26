@@ -1,14 +1,14 @@
 #ifndef _RX_INTERPOLATION_INCLUDED
 #define _RX_INTERPOLATION_INCLUDED
 
-__attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(NSUInteger x) { return @"lu"; }
-__attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(NSInteger x) { return @"li"; }
+__attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(uint64_t x) { return @"qu"; }
+__attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(int64_t x) { return @"qi"; }
 
-__attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(uint64_t x) { return @"lu"; }
-__attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(int64_t x) { return @"li"; }
+__attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(unsigned long x) { return @"lu"; }
+__attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(long x) { return @"li"; }
 
-__attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(uint32_t x) { return @"u"; }
-__attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(int32_t x) { return @"i"; }
+__attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(unsigned int x) { return @"u"; }
+__attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(int x) { return @"i"; }
 
 __attribute__((overloadable)) static inline NSString *_rx_format_type_specifier_for_value(void *x) { return @"p"; }
 
