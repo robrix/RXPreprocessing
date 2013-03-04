@@ -18,7 +18,7 @@ Formats and concatenates its arguments as an NSString according to their types. 
 */
 
 #define rx_q(...) \
-	[@[rx_fold(_rx_q_format_each, , __VA_ARGS__)] componentsJoinedByString:@""]
+	[[NSArray arrayWithObjects:rx_fold(_rx_q_format_each, __VA_ARGS__, nil)] componentsJoinedByString:@""]
 
 
 /**
